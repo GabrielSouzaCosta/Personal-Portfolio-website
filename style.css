@@ -34,7 +34,7 @@ body {
     transform-origin: bottom left;
   }
 
-a{
+.luminate{
     position: relative;
     display: inline-block;
     margin: 40px 0;
@@ -45,9 +45,15 @@ a{
     letter-spacing: 4px;
     overflow: hidden;
     margin-right: 50px;
-   
 }
-a:hover{
+
+.luminate-logo{
+    filter: hue-rotate(160deg);
+    text-decoration: none;
+}
+
+
+.luminate:hover{
     background: #03e9f4;
     color: #050801;
     box-shadow: 0 0 5px #03e9f4,
@@ -55,18 +61,18 @@ a:hover{
                 0 0 50px #03e9f4,
                 0 0 200px #03e9f4;
      -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+    font-weight: bold;
 }
-a:nth-child(1){
-    filter: hue-rotate(270deg);
+
+.luminate:nth-child(2){
+    filter: hue-rotate(200deg);
 }
-a:nth-child(2){
-    filter: hue-rotate(110deg);
-}
-a span{
+.luminate span{
     position: absolute;
     display: block;
 }
-a span:nth-child(1){
+
+.luminate span:nth-child(1){
     top: 0;
     left: 0;
     width: 100%;
@@ -82,7 +88,7 @@ a span:nth-child(1){
         left: 100%;
     }
 }
-a span:nth-child(2){
+.luminate span:nth-child(2){
     top: -100%;
     right: 0;
     width: 2px;
@@ -99,7 +105,7 @@ a span:nth-child(2){
         top: 100%;
     }
 }
-a span:nth-child(3){
+.luminate span:nth-child(3){
     bottom: 0;
     right: 0;
     width: 100%;
@@ -118,7 +124,7 @@ a span:nth-child(3){
 }
 
 
-a span:nth-child(4){
+.luminate a span:nth-child(4){
     bottom: -100%;
     left: 0;
     width: 2px;
@@ -134,4 +140,15 @@ a span:nth-child(4){
     50%,100%{
         bottom: 100%;
     }
+}
+
+.card-project{
+    cursor: pointer;
+}
+.card-project:hover {
+    box-shadow: 0 0 5px #79074d,
+    0 0 25px #97045f,
+    0 0 50px #a30968,
+    0 0 200px #2f03f4;;
+    transition: box-shadow 1s ease-in-out;
 }
