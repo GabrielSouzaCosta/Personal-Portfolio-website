@@ -178,3 +178,19 @@ body {
     filter: blur(4px);
     transition: filter 1s;
 }
+
+.btn-contact {
+    border: none;
+    border-radius: 70px; 
+    background-color: "#ffffff";
+}
+
+.btn-contact {
+    font-family: 'Anton', sans-serif;
+}
+
+.btn-contact:hover {
+    background-color: #425e1e;
+    color: white;
+    transition: all 1.7s;
+}
