@@ -194,3 +194,16 @@ body {
     color: white;
     transition: all 1.7s;
 }
+
+.stand-photo:hover {
+    transform: scale(1.1);
+    box-shadow: -2px 3px 20px 5px rgba(0,0,0,0.1);
+    -webkit-box-shadow: -2px 3px 20px 5px rgba(0,0,0,0.1);
+    -moz-box-shadow: -2px 3px 20px 5px rgba(0,0,0,0.1);
+    transition: all 1.5s;
+}
+
+.stand:hover {
+    transform: scale(1.1);
+    transition: all 1.5s;
+}
