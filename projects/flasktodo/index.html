@@ -10,6 +10,60 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="d-flex flex-column position-fixed end-0 top-0 p-2" style="z-index: 1;">
+        <a href="https://github.com/GabrielSouzaCosta/SalveUmPet-React-Flask" target="_blank">
+            <img src="/images/github.png" alt="bomb crypto bot repositorio" class="link-icon img-fluid">
+        </a>
+    </div>
+    <div class="container">
+        <h1 class="text-center pt-3">Flask To-do List</h1>
+        <div class="d-flex flex-column flex-sm-row text-center display-6 mt-4">
+            <div class="col-12 col-md-4 pe-0">
+                <div class="d-flex flex-column">
+                    <div class="card bg-danger mb-2">To-do</div>
+                    
+                    <div class="input-group">
+                        <div class="d-flex w-100 align-items-center justify-content-center">
+                            <input type="text" name="item"  class="form-control me-2" />
+                            <button class="btn btn-dark me-3 rounded-circle" type="submit">+</button>
+                        </div>
+                    </div>
+
+                    <div class="card fw-bold text-start text-break ps-2 mt-2 mb-1 card-todo" >
+                        <u>Comandos para banco de dados sem SQLAlchemy</u>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-4 pe-0">
+                <div class="d-flex flex-column">
+                    <div class="card bg-warning mb-2 ">Doing</div>
+                </div>    
+            </div>
+            
+            <div class="col-12 col-md-4">
+                <div class="d-flex flex-column px-0">
+                    <div class="card bg-success mb-2">Done</div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<script>
+    let cards = document.querySelectorAll('.card-todo');
+
+    function onMouseEnter(event) {
+        event.target.style.textDecoration = 'line-through';
+        event.target.style.transition = 'all 2s';
+    }
+
+    cards.forEach((card) => {
+        card.onmouseenter = onMouseEnter;
+        console.log(card);
+    })
+</script>
     
 </body>
 </html>
