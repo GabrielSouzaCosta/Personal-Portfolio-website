@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="/projects/projects-style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Flask To-do List</title>
 </head>
 <body>
     <div class="d-flex flex-column position-fixed end-0 top-0 p-2" style="z-index: 1;">
-        <a href="https://github.com/GabrielSouzaCosta/SalveUmPet-React-Flask" target="_blank">
-            <img src="/images/github.png" alt="bomb crypto bot repositorio" class="link-icon img-fluid">
+        <a href="https://github.com/GabrielSouzaCosta/to-do-flask" target="_blank">
+            <img src="/images/github.png" alt="flask to-do list repositorio" class="link-icon img-fluid">
         </a>
     </div>
     <div class="container">
@@ -20,18 +20,15 @@
         <div class="d-flex flex-column flex-sm-row text-center display-6 mt-4">
             <div class="col-12 col-md-4 pe-0">
                 <div class="d-flex flex-column">
-                    <div class="card bg-danger mb-2">To-do</div>
-                    
-                    <div class="input-group">
-                        <div class="d-flex w-100 align-items-center justify-content-center">
-                            <input type="text" name="item"  class="form-control me-2" />
-                            <button class="btn btn-dark me-3 rounded-circle" type="submit">+</button>
-                        </div>
-                    </div>
+                    <div class="card bg-danger mb-2 mt-1 mt-md-0">To-do</div>
 
-                    <div class="card fw-bold text-start text-break ps-2 mt-2 mb-1 card-todo" >
-                        <u>Comandos para banco de dados sem SQLAlchemy</u>
+                    <div class="card fw-bold text-start text-break ps-2 mt-2 mb-1 card-todo " >
+                        Simples To-do List feito com Flask
                     </div>
+                    <div class="card fw-bold text-start text-break ps-2 mt-2 mb-1 card-todo" >
+                        Comandos para banco de dados PostgreSQL sem SQLAlchemy
+                    </div>
+                    
                 </div>
             </div>
             
@@ -39,12 +36,16 @@
                 <div class="d-flex flex-column">
                     <div class="card bg-warning mb-2 ">Doing</div>
                 </div>    
+                <div style="background-color: #ffffff77" class="card fw-bold text-start text-break mt-1 mb-2 mx-2" >
+                    <div style="width:100%;height:0;padding-bottom:100%;position:relative;"><iframe src="https://giphy.com/embed/heIX5HfWgEYlW" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p class="text-center m-0"><a style="text-decoration: none; color: black;" href="https://giphy.com/gifs/cat-laptop-document-heIX5HfWgEYlW">via GIPHY</a></p>
+                </div>
             </div>
             
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4" id="done">
                 <div class="d-flex flex-column px-0">
                     <div class="card bg-success mb-2">Done</div>
                 </div>
+                
             </div>
         </div>
         
@@ -53,16 +54,31 @@
 
 <script>
     let cards = document.querySelectorAll('.card-todo');
+    let done = document.getElementById('done');
 
-    function onMouseEnter(event) {
-        event.target.style.textDecoration = 'line-through';
-        event.target.style.transition = 'all 2s';
-    }
+    document.addEventListener('DOMContentLoaded', () => {
+        cards.forEach((card, i) => {
+            setTimeout(() => {
+                card.style.textDecoration = 'line-through';
+                card.classList.add('fade-out-left');
+                doneCard = card.cloneNode(true);
+                doneCard.classList.remove('fade-out-left');
+                doneCard.classList.add('fade-in-right')
+                done.appendChild(doneCard);
+            }, (i + 1) * 800)
+        })
 
-    cards.forEach((card) => {
-        card.onmouseenter = onMouseEnter;
-        console.log(card);
+        let newTexts = ['Login e registro de usuários', 'Fazer deployment'];
+        cards.forEach((card, i) => {
+            setTimeout(() => {
+                card.innerHTML = newTexts[i];
+                card.classList.remove('fade-out-left');
+                card.style.textDecoration = 'none';
+                card.classList.add('fade-in-left');
+            }, 2000)
+        })
     })
+
 </script>
     
 </body>

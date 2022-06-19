@@ -207,3 +207,8 @@ body {
     transform: scale(1.1);
     transition: all 1.5s;
 }
+
+#contact div:hover {
+    filter: brightness(95%) hue-rotate(10deg);
+    transition: filter 1.2s;
+}
