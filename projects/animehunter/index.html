@@ -16,16 +16,55 @@
         </a>
     </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid h-100">
         <video src="assets/video.mp4" loop muted autoplay></video>
-        <h1 class="text-center text-white pt-2">Anime Hunter</h1>
-            <div class="row m-auto">
-                <img src="assets/goku.png" alt="escolher goku" class="col-10 col-md-4 col-lg-2 m-auto stand">
-                <img src="assets/mikasa.png" alt="escolher goku" class="col-11 col-md-4 col-lg-3 m-auto stand">
-                <img src="assets/naruto.png" alt="escolher goku" class="col-11 col-md-4 col-lg-3 m-auto stand">
+        <h1 class="text-center text-white pt-2 display-4">Anime Hunter</h1>
+            <div class="row m-auto" style="height: 100%;">
+                <a href="javascript:delay('#top')" class="col-10 col-md-4 col-lg-2 m-auto stand" onclick="document.getElementById('discover').style.display = 'none'; document.getElementById('top').style.display = 'block'; document.getElementById('favorites').style.display = 'none' ">
+                    <img src="assets/goku.png" alt="escolher Goku" class="w-100">
+                </a>
+                <a href="javascript:delay('#discover')" class="col-11 col-md-4 col-lg-3 m-auto stand" onclick="document.getElementById('discover').style.display = 'block'; document.getElementById('top').style.display = 'none'; document.getElementById('favorites').style.display = 'none'">
+                    <img src="assets/mikasa.png" alt="escolher Mikasa" class="w-100">
+                </a>
+                <a href="javascript:delay('#favorites')" class="col-11 col-md-4 col-lg-3 m-auto stand pb-4" onclick="document.getElementById('discover').style.display = 'none'; document.getElementById('top').style.display = 'none'; document.getElementById('favorites').style.display = 'block' ">
+                    <img src="assets/naruto.png" alt="escolher Naruto" class="w-100" >
+                </a>
+                
+                <div style="display: none; background-color: #ffffff;" class="col-12 p-0 m-0" id="top">
+                <iframe src="https://anime-hunter-django.herokuapp.com/top/"  frameborder="0" 
+                marginheight="0" 
+                marginwidth="0" 
+                width="100%" 
+                height="100%" 
+                scrolling="yes"></iframe>
             </div>
+
+            <div style="display: none; background-color: #ffffff;" class="col-12 p-0 m-0" id="discover">
+                <iframe src="https://anime-hunter-django.herokuapp.com/discover" frameborder="0" 
+                marginheight="0" 
+                marginwidth="0" 
+                width="100%" 
+                height="100%" 
+                scrolling="auto"></iframe>
+            </div>
+
+            <div style="display: none; background-color: #ffffff; overflow:hidden;height:100%;width:100%" class="col-12 m-0 p-0 mt-5 h-100" id="favorites">
+                <iframe src="https://anime-hunter-django.herokuapp.com/favorites_test/"  frameborder="0" 
+                marginheight="0" 
+                marginwidth="0" 
+                width="100%"  
+                height="100%"
+                scrolling="auto"
+                ></iframe>
+            </div>
+        </div>
     </div>
 
-    
+<script>
+    function delay (URL) {
+        setTimeout( function() { window.location = URL }, 1500 );
+    }
+</script>    
+
 </body>
 </html>
