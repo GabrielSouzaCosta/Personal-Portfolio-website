@@ -12,8 +12,14 @@
 <body>
     <div class="d-flex flex-column position-fixed end-0 top-0 p-2" style="z-index: 1;">
         <a href="https://github.com/GabrielSouzaCosta/anime_hunter" target="_blank">
-            <img src="/images/github.png" alt="django to-do list repositorio" class="p-1 img-fluid">
+            <img src="/images/github.png" alt="django to-do list repositorio" width="50px" style="opacity: 0.8;">
         </a>
+        <a href="/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50px" style="opacity: 0.8;" fill="#ffffff" class="bi bi-house-fill home" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+              </svg>
+        </a> 
     </div>
 
     <div class="container-fluid h-100">
@@ -30,8 +36,8 @@
                     <img src="assets/naruto.png" alt="escolher Naruto" class="w-100" >
                 </a>
                 
-                <div style="display: none; background-color: #ffffff;" class="col-12 p-0 m-0" id="top">
-                <iframe src="https://anime-hunter-django.herokuapp.com/top/"  frameborder="0" 
+                <div style="display: none; background-color: #ffffaa; overflow:hidden;height:100%;width:100%;" class="col-12 p-0 m-0" id="top">
+                <iframe src="https://anime-hunter-django.herokuapp.com/top/" style="position: relative; top: -60px;"  frameborder="0" 
                 marginheight="0" 
                 marginwidth="0" 
                 width="100%" 
@@ -39,17 +45,18 @@
                 scrolling="yes"></iframe>
             </div>
 
-            <div style="display: none; background-color: #ffffff;" class="col-12 p-0 m-0" id="discover">
-                <iframe src="https://anime-hunter-django.herokuapp.com/discover" frameborder="0" 
+            <div style="display: none; background-color: #ffffff66; overflow:hidden;height:100%;width:100%;" class="col-12 p-0 m-0" id="discover">
+                <iframe src="https://anime-hunter-django.herokuapp.com/discover" style="position: relative; top: -60px;" frameborder="0" 
                 marginheight="0" 
                 marginwidth="0" 
                 width="100%" 
                 height="100%" 
-                scrolling="auto"></iframe>
+                scrolling="auto"
+                ></iframe>
             </div>
 
-            <div style="display: none; background-color: #ffffff; overflow:hidden;height:100%;width:100%" class="col-12 m-0 p-0 mt-5 h-100" id="favorites">
-                <iframe src="https://anime-hunter-django.herokuapp.com/favorites_test/"  frameborder="0" 
+            <div style="display: none; background-color: transparent; overflow:hidden;height:100%;width:100%;" class="col-12 m-0 p-0 mt-5" id="favorites">
+                <iframe src="https://anime-hunter-django.herokuapp.com/favorites_test/" style="position: relative; top: -60px;"  frameborder="0" 
                 marginheight="0" 
                 marginwidth="0" 
                 width="100%"  

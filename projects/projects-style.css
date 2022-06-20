@@ -7,6 +7,10 @@ img {
     cursor: pointer;
 }
 
+.home:hover {
+  fill: rgb(221, 35, 97);
+}
+
 .link-icon:hover {
     filter: invert(1);
 }
