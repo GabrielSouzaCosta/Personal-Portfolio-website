@@ -2,7 +2,7 @@
 
 O site contém meus dados de contato e meus principais projetos.
 
-Cada projeto contém uma página personalizada e única.
+Cada projeto contém uma página personalizada e única.<br><br>
 link: https://gabrielsouzacosta.github.io/
 
 <h2>Página Inicial</h2>
